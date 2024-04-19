@@ -1,0 +1,31 @@
+{
+    /*
+tsconfig.json 是 TypeScript 的配置文件，它会告诉 TypeScript 如何编译项目。
+    "inclue" 字段指定了编译器要包含的文件列表。  ./src/
+        路径:   ** 表示任意目录
+                * 表示任意文件
+    "exclue" 不需要被编译的文件
+
+    */
+    "include": [
+        "./src/**/*"
+    ],
+    // "exclude": [],
+    "compilerOptions": {
+        "target": "ES6", // 编译目标版本， 默认es3，可选es5、es6、es2015、es2016、es2017、es2018、esnext
+        // "module": "ES2015", // 模块代码生成方式，默认commonjs，可选amd、umd、system、es2015、esnext
+        // "lib": ["DOM"], // 编译过程中需要包含的库文件列表
+        "outDir": "./dist", // 编译输出目录
+        // "outFile": "./dist/bundle.js" // 编译输出文件, 所有全局作用域下所有代码合并成一个文件中, 模块化下只能amd和system模块化规范
+        "allowJs": true, // 允许编译javascript文件, 默认是false
+        "checkJs": false, // 类型检查javascript文件, 默认是false
+        "removeComments": true, // 是否移除注释
+        "noEmit": false, // 不生成编译后的文件
+        "noEmitOnError": true, // 发生错误时不生成编译后的文件
+        "strict": false, // 启用所有严格类型检查选项
+        "alwaysStrict": false, // 编译后代码中包含严格模式的"use strict"指令
+        "noImplicitAny": true, // 检查 隐式的 any 类型, 默认是false true:不允许隐式的any类型;
+        "noImplicitThis": true, // 检查 this 关键字是否被隐式的类型化, 默认是false true:不允许隐式的this类型;
+        "strictNullChecks": false, // 严格检查 null 和 undefined, 默认是false true:不允许null和undefined为任何类型的值;
+    }
+}
